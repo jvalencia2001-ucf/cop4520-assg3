@@ -34,6 +34,8 @@ Prog1 or minotaurs-chain is the program for the first half of assingment 3. It w
 
 Prog2 or mars-rover is the program for the second hald of assignment 3. It will print a report of the temperatures as requested in the assignment every hour.
 
+\*NOTE ON PROG2: Prog 2 is currently not reporting every hour. Instead its reporting every 5 minutes and it gives the range with the one minute range with highest temp change.
+
 ## **Efficiency**
 
 The efficiency of prog1 seems to be pretty good. There is no numbers to prove it but the simulation of adding, removing and looking for a gift concurrently by 4 threads finishes almost instantly. The linked list is basically a normal linked list which has a mutex to block itself while an operation is modifying the nodes. Having only one lock in the linked list could lead to traffic, but it seems to still be doing well with 500k gifts.

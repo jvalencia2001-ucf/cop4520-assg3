@@ -88,7 +88,7 @@ void temperatureReporter()
     {
         // Get temperature readings for the hour
         std::vector<TemperatureData> hourTemps;
-        for (int i = 0; i < 60 * NUM_SENSORS; ++i)
+        for (int i = 0; i < 5 * NUM_SENSORS; ++i)
         {
             hourTemps.push_back(temperatureQueue.pop());
         }
@@ -127,7 +127,7 @@ void temperatureReporter()
                     std::time_t time1 = std::chrono::system_clock::to_time_t(hourTemps[j].timestamp);
                     std::time_t time2 = std::chrono::system_clock::to_time_t(hourTemps[i].timestamp);
                     std::time_t diffInSeconds = time1 - time2;
-                    if (tempDiff > maxTempDiff && (diffInSeconds > 540 && diffInSeconds < 660))
+                    if (tempDiff > maxTempDiff && (diffInSeconds > 60 && diffInSeconds < 120))
                     {
                         maxTempDiff = tempDiff;
                         maxTempDiffStart = hourTemps[i].timestamp;
