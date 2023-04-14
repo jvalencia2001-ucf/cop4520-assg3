@@ -1,6 +1,3 @@
-# Makefile for compiling app1.cpp and app2.cpp into prog1 and prog2
-
-# Compiler
 CC = g++
 
 # Source files and output files
