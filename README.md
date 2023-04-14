@@ -34,7 +34,7 @@ Prog1 or minotaurs-chain is the program for the first half of assingment 3. It w
 
 Prog2 or mars-rover is the program for the second hald of assignment 3. It will print a report of the temperatures as requested in the assignment every hour.
 
-\*NOTE ON PROG2: Prog 2 is currently not reporting every hour. Instead its reporting every 5 minutes and it gives the range with the one minute range with highest temp change.
+\*NOTE ON PROG2: Prog 2 is currently not reporting every hour. Instead its reporting every 5 minutes and it gives the range with the one minute range with highest temp change. TO change back to an hour with with ranges of 10 mins change or any other custom settings, change the '5' in line 91 for however many minutes you want the program to take to generate a response. To change the range of time to find the highest temp difference, change '(diffInSeconds > 60 && diffInSeconds < 120)' in line 130 to however big of a gap in seconds you want.
 
 ## **Efficiency**
 
